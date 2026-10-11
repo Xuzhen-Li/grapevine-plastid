@@ -27,6 +27,5 @@ No unpublished genotypes, private coordinates, or sample-level matrices.
 - [vitis-pangenome](https://github.com/Xuzhen-Li/vitis-pangenome) — nuclear graphs, PAV, mixed-variant / dosage
 - [grapevine-adna](https://github.com/Xuzhen-Li/grapevine-adna) — damage, authentication, aDNA capture
 - [genomics-theory-mining](https://github.com/Xuzhen-Li/genomics-theory-mining) — one classic paper, one folder
-- [bioinfo-agent-skills](https://github.com/Xuzhen-Li/bioinfo-agent-skills) — index of sibling repos
 
 **Author:** Xuzhen Li · [ORCID](https://orcid.org/0000-0003-3670-6657)
