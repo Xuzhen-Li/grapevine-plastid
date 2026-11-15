@@ -1,0 +1,81 @@
+# 2. Assembly tools, by data type
+
+The commands shown in this chapter come directly from the tool READMEs or papers listed in the table. They were not executed on this machine.
+
+## Short-read (Illumina) plastome assembly
+
+**GetOrganelle** (Jin et al. 2020, Genome Biology, full text) is summarized in its abstract as follows:
+
+> “GetOrganelle is a state-of-the-art toolkit to accurately assemble organelle genomes from whole genome sequencing data. It recruits organelle-associated reads using a modified ‘baiting and iterative mapping’ approach, conducts de novo assembly, filters and disentangles the assembly graph, and produces all possible configurations of circular organelle genomes. For 50 published plant datasets, we are able to reassemble the circular plastomes from 47 datasets using GetOrganelle. GetOrganelle assemblies are more accurate than published and/or NOVOPlasty-reassembled plastomes as assessed by mapping. We also assemble complete mitochondrial genomes using GetOrganelle.”
+
+The full text adds that the main script uses Bowtie2, BLAST and SPAdes, starts from a seed, and treats seed-mapped reads as “baits.” The GitHub README (https://github.com/Kinggerm/GetOrganelle, opened 15 November 2026, CST) says the toolkit “assemblies organelle genome from genomic skimming data,” asks users to update to 1.7.5+ because a multiplicity bug on self-loop vertices was fixed, and gives this example for an embplant plastome:
+
+```
+get_organelle_from_reads.py -1 forward.fq -2 reverse.fq -o plastome_output -R 15 -k 21,45,65,85,105 -F embplant_pt
+```
+
+For an embplant mitogenome the same README shows `-F embplant_mt` (and a `-P 1000000` example). The README also says, verbatim, “embplant_mt mode was not tested in the GetOrganelle paper due to the complexity of plant mitogenomes and the defects of short reads.” The README further says `get_organelle_from_reads.py` was written for Illumina paired- or single-end fastq, and recommends adapter-trimmed raw reads without quality control.
+
+**NOVOPlasty** (Dierckxsens, Mardulyn and Smits 2017, full text, doi:10.1093/nar/gkw955) is a de novo assembler of organelle genomes from whole-genome data. The GitHub README (https://github.com/ndierckx/NOVOPlasty, title line “version 4.3.3”) describes it as “The organelle assembler and heteroplasmy caller” and shows:
+
+```
+perl NOVOPlasty4.3.1.pl -c config.txt
+```
+
+The wrapper in this repository uses that 4.3.1 command as a copy of an older README example; the README we opened on 15 November 2026 CST is titled version 4.3.3. Treat 4.3.1 in the wrapper as an example script name, not as a claim that 4.3.1 is the current release. The same README states: “For the moment only paired end reads are supported”; “DO NOT filter or quality trim the reads!!!” (remove adapters only); and, for plant mitochondria, `Type = mito_plant` with the instruction “You have to assemble the chloroplast before you assemble the mitochondria of plants!” The heteroplasmy caller is a separate option and must be cited with the 2019/2020 paper (doi:10.1093/nargab/lqz011); see chapter 6.
+
+**Freudenthal et al. (2020, full text)** benchmarked chloroplast assemblers on both simulated and real datasets. In the section “Guidelines for the end-user” they wrote:
+
+> “Given these results, our recommendation is to use GetOrganelle as a default option for chloroplast assemblies. If GetOrganelle does not produce a use-able assembly, Fast-Plast is a valid back-up solution that might be successful.”
+
+They also wrote: “The best performance overall, both on simulated and real data, was achieved by GetOrganelle. Fast-Plast performed nearly as well on most data.” This comparison predates PMAT (2024), Oatk (2025) and HiMT (2025), which target long HiFi reads and are not part of that 2020 ranking.
+
+## HiFi and other long-read mitogenome / organelle assemblers
+
+**PMAT** (Bi et al. 2024, *Horticulture Research*, full text) is presented for low-coverage HiFi:
+
+> “Here, we present an efficient assembly toolkit (PMAT) for de novo assembly of plant mitogenomes using low-coverage HiFi sequencing data. PMAT has been applied to the de novo assembly of 13 broadly representative plant mitogenomes, outperforming existing organelle genome assemblers in terms of assembly accuracy and completeness. By evaluating the assembly of plant mitogenomes from different sequencing data, it was confirmed that PMAT only requires 1× HiFi sequencing data to obtain a complete plant mitogenome.”
+
+The GitHub README (https://github.com/bichangwei/PMAT) states that “PMAT is an efficient assembly toolkit for assembling plant mitogenomes using third-generation (HiFi/CLR/ONT) sequencing data. PMAT can also be used to assemble chloroplast genomes or animal mitogenomes.” It documents an `autoMito` one-step mode and a `graphBuild` mode. The README says Canu > v2.0 or NextDenovo “is required for CLR or ONT sequencing data” (a correction step before assembly). We did not run either mode. Version 1.5.3 appears in the README “Version” section opened this batch.
+
+**Oatk** (Zhou et al. 2025, Genome Biology, full text; prefer this paper over the 2024 preprint) describes three ingredients in the abstract:
+
+> “Here we introduce a novel tool that employs a syncmer-based assembler for rapid assembly graph construction, integrates a profile-HMM database for robust organelle identification, and leverages a new search method to find the best supported path through the assembly graph. We describe high-quality organelle assemblies for 195 plant species, demonstrating improvements over other methods, and providing multiple insights into structural complexity, heteroplasmy, and DNA exchange between organelles.”
+
+The README (https://github.com/c-zhou/oatk) says Oatk is “designed for de novo assembly of complex plant organelle genomes using PacBio HiFi data” and “can also be used to assemble other simple organelle genomes such as animal mitochondria.” The README scope is PacBio HiFi, not CLR or ONT (see also figure F2). One example command in the README is:
+
+```
+oatk -k 1001 -c 30 -t 8 --nhmmscan /bin/nhmmscan -m embryophyta_mito.fam -p embryophyta_pltd.fam -o ddAraThal4 ddAraThal4_organelle.hifi.fa.gz
+```
+
+The `-c 30` value is the Arabidopsis example in that README, not a grape default. The same README says a proper coverage threshold helps “filter out the nuclear genome and numts” and, “as an empirical instruction, this parameter can be set as 5-10 times the value of nuclear sequence coverage.”
+
+**HiMT** (Tang et al. 2025, *Plant Communications*, full text) is described as a user-friendly toolkit for one-click chloroplast and mitochondrial assembly from HiFi reads, “particularly for plant species.” The abstract says it “automatically estimates read coverage depth and employs a fixed k-mer prefix strategy to minimize computational demands, making it suitable for use on standard laptops,” and that it has a GUI and interactive quality reports. It “is freely available to non-commercial users at https://github.com/tang-shuyuan/HiMT.” The README we opened lists `himt assemble -i hifi.fa -o output_dir -t 10` and also documents a `-d ONT/CLR` option. The paper and README should be read together on the licence (non-commercial, as stated in the paper).
+
+**PMAT2** (2025, full text, doi:10.1002/imt2.70064) is presented as “An efficient graphical assembly toolkit for comprehensive organellar genomes.” The paper abstract states that it applies to “plant, animal, and fungal mitochondrial genomes, as well as plant chloroplast genome,” “even with approximately 1 × … HiFi reads.” The README opened at https://github.com/bichangwei/PMAT2 shows install commands that clone `https://github.com/aiPGAB/PMAT2` and run `./PMAT --help`. Parameter names differ from PMAT (README: `-t` is seqtype, `-G` is organelles, `-x` is taxo) and must not be copied from a PMAT command. We opened the bichangwei/PMAT2 README, not a second clone of aiPGAB/PMAT2. The PMAT2 README citation section lists the 2024 PMAT paper; year and format are left for the literature reviewer.
+
+**MitoHiFi** (Uliano-Silva et al. 2023, full text; doi:10.1186/s12859-023-05385-y; PMC10354987) is “a python pipeline for mitochondrial genome assembly from PacBio high fidelity reads.” The GitHub repository description (repo metadata, not the README body) presents it as finding, circularising and annotating a mitogenome from PacBio assemblies. The README, verbatim, can “Identify and separate NUMTS (Nuclear Mitochondrial DNA Sequences) from genuine mitogenome contigs,” and documents `-a {animal,plant,fungi}`. README section 6, “New parameter for plants!!”, states, verbatim (including the spelling): “MitoHiFi is still not optmized to assemble a plant mitochondria or chloroplast.” The same paragraph says that if you already have a contig you consider to be a plant mitochondrion or chloroplast, you can use MitoHiFi with the flag `-c` “to finalize your organelle” (circularise if applicable, annotate, and output statistics), and that “To do this, you need to use the parameter **-a plant** when calling the main script mitohifi.py .” The `-a plant` flag is therefore for finishing and annotating an existing plant organelle contig together with `-c`; it is not a statement that MitoHiFi is a general plant organelle assembler. The paper says “For the assembly of mitochondrial genomes from Viridiplantae (plants) the parameter -a plant should be called.” The same paper also says, verbatim: “Although MitoHiFi was optimised to assemble metazoan mitochondrial genomes, it has performed well with Fungi where the mitochondrial genomes assembled ranged from 43 to 133 kb (Fig. 2).” Earlier in the same paper: “It's worth noting that MitoHiFi is not optimised to assemble plants or fungal organelles.” It continues: “While MitoHiFi can also assemble plant mitochondria and plastid genomes, the outcomes may vary.” It attributes that variation to “significant variations in size, gene content, and repeat composition,” and adds that “The final output completeness of these genomes will depend on the complexity of the genome assembly graph.” The paper abstract reports data from 368 metazoan species and 6 fungi; that is the paper’s dataset. MitoHiFi is not a direct replacement for plant mitogenome or plastome graph assemblers. For plant organelle assembly, prefer the graph assemblers in this chapter and chapter 3 (PMAT/PMAT2, Oatk, HiMT, GetOrganelle). It requires a close-reference FASTA and GenBank file in the documented workflow.
+
+## Long-read plastid assembly as a separate problem
+
+Zhou et al. (2023, *Molecular Ecology Resources*, full text; doi:10.1111/1755-0998.13787; first author Zhou W, not Wang), titled “Plastid Genome Assembly Using Long-read data,” introduce a pipeline, plastid Genome Assembly Using Long-read data (ptGAUL). The abstract says: “We generated a pipeline, plastid Genome Assembly Using Long-read data (ptGAUL), to address the problem of plastome assembly using long-read data from Oxford Nanopore Technologies (ONT) or Pacific Biosciences platforms … ptGAUL quickly produces accurate and unbiased assemblies using only ~50× coverage of plastome data.” Use that paper when choosing a long-read plastid protocol; do not assume the Freudenthal 2020 short-read ranking still applies unchanged to long-read plastomes. Official ptGAUL commands should be taken from the ptGAUL README, which was not opened in this batch (**[待确认]** for the exact command line). Oatk/HiMT/PMAT README commands above are documented for organelles generally and were not the subject of the Freudenthal 2020 short-read ranking.
+
+## Claim–source table
+
+| Claim | Source | Quoted sentence or figure/table | What was read |
+|---|---|---|---|
+| GetOrganelle: baiting and iterative mapping; graph disentangling; all circular configurations; 47/50 published plant datasets; also complete mitogenomes | doi:10.1186/s13059-020-02154-5 | Abstract sentences quoted above | Full text (PMC7488116) |
+| GetOrganelle uses Bowtie2, BLAST, SPAdes; seed then baits | doi:10.1186/s13059-020-02154-5 | Methods / workflow paragraph in the full text | Full text |
+| Example `get_organelle_from_reads.py` command, `-F embplant_pt` / `embplant_mt`, Illumina fastq, recommend adapter-trimmed reads, update to 1.7.5+; embplant_mt “was not tested in the GetOrganelle paper” | https://github.com/Kinggerm/GetOrganelle | README examples and the embplant_mt caveat quoted above | README (21,025 bytes), 2026-11-15 CST |
+| Freudenthal et al. recommend GetOrganelle as the default chloroplast assembler, Fast-Plast as backup; best overall on simulated and real data in that study | doi:10.1186/s13059-020-02153-6 | “Guidelines for the end-user” and discussion sentences quoted above | Full text (PMC7520963) |
+| NOVOPlasty assembles organelle genomes from WGS; README v4.3.3 tagline; example script name 4.3.1; paired-end only; do not quality-trim; plant mitochondria use mito_plant after assembling the chloroplast | doi:10.1093/nar/gkw955 ; https://github.com/ndierckx/NOVOPlasty | README sentences quoted above | Full text (PMC5389512) + README (12,323 bytes) |
+| Heteroplasmy calling is documented in a later paper and a two-step MAF protocol | doi:10.1093/nargab/lqz011 ; README “Cite” and “Heteroplasmy” | See chapter 6 | Abstract + README |
+| PMAT: de novo plant mitogenomes from low-coverage HiFi; 13 representative plants; “only requires 1× HiFi” in the authors’ evaluation | doi:10.1093/hr/uhae023 | Abstract sentences quoted above | Full text (PMC10925850) |
+| PMAT README: HiFi/CLR/ONT; Canu or NextDenovo required for CLR/ONT; also chloroplast or animal mitogenomes; `autoMito` and `graphBuild`; version 1.5.3 in the opened README | https://github.com/bichangwei/PMAT | README sentences quoted above | README (14,309 bytes) |
+| Oatk: syncmer assembler, profile-HMM, best-supported path; 195 plant species; insights on structural complexity, heteroplasmy, DNA exchange | doi:10.1186/s13059-025-03676-6 | Abstract sentences quoted above | Full text (PMC12329965) |
+| Oatk README: HiFi only; example `-c 30` is the Arabidopsis demo; `-c` should be 5–10× nuclear coverage to help filter nuclear sequence and NUMTs | https://github.com/c-zhou/oatk | README sentences quoted above | README (10,191 bytes) |
+| HiMT: one-click cp and mt from HiFi, auto coverage, fixed k-mer prefix, laptops, GUI; non-commercial GitHub | doi:10.1016/j.xplc.2025.101467 | Abstract sentences quoted above | Full text (PMC12447420) |
+| `himt assemble -i hifi.fa -o output_dir -t 10`; `-d ONT/CLR` documented | https://github.com/tang-shuyuan/HiMT | README | README (14,907 bytes) |
+| PMAT2: plant, animal and fungal mitochondria and plant chloroplasts; ~1× HiFi in the abstract; parameter names differ from PMAT | doi:10.1002/imt2.70064 ; https://github.com/bichangwei/PMAT2 | Abstract and README | Full text (PMC12371249) + README |
+| MitoHiFi: Python pipeline for mt assembly from PacBio HiFi; README §6: “still not optmized to assemble a plant mitochondria or chloroplast”; `-a plant` is used with `-c` to finish an existing plant organelle contig; paper: Viridiplantae runs should use `-a plant`; “was optimised to assemble metazoan mitochondrial genomes”; “not optimised to assemble plants or fungal organelles”; plant “outcomes may vary”; not a direct replacement for plant graph assemblers; paper data are 368 metazoans and 6 fungi | doi:10.1186/s12859-023-05385-y ; https://github.com/marcelauliano/MitoHiFi | README §6 and paper sentences quoted above | Full text (PMC10354987, re-opened 2026-11-15 CST) + README (18,295 bytes, re-opened) |
+| Zhou et al. 2023 (not Wang): ptGAUL assembles plastomes from ONT or PacBio long reads at ~50× plastome coverage | doi:10.1111/1755-0998.13787 | Abstract sentences quoted above | Full text (PMC10354735); ptGAUL README not opened |
