@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460" viewBox="0 0 820 460" role="img">
+  <title>F1. Four-part Vitis plastome (schematic)</title>
+  <rect width="820" height="460" fill="#fffef8"/>
+  <text x="24" y="32" font-family="Georgia, serif" font-size="18" fill="#1a1a1a">F1. Four-part Vitis plastome (schematic)</text>
+<circle cx="360" cy="230" r="132" fill="none" stroke="#2c5f2d" stroke-width="26"/>
+<circle cx="360" cy="230" r="132" fill="none" stroke="#3d7a40" stroke-width="26" stroke-dasharray="460 370" transform="rotate(-90 360 230)"/>
+<circle cx="360" cy="230" r="132" fill="none" stroke="#c9842a" stroke-width="26" stroke-dasharray="0 460 136 330" transform="rotate(-90 360 230)"/>
+<circle cx="360" cy="230" r="132" fill="none" stroke="#2a6f97" stroke-width="26" stroke-dasharray="0 596 98 140" transform="rotate(-90 360 230)"/>
+<circle cx="360" cy="230" r="132" fill="none" stroke="#c9842a" stroke-width="26" stroke-dasharray="0 694 136 0" transform="rotate(-90 360 230)"/>
+<circle cx="360" cy="230" r="78" fill="#fffef8"/>
+<text x="360" y="218" text-anchor="middle" font-family="Georgia, serif" font-size="14">Vitis vinifera</text>
+<text x="360" y="238" text-anchor="middle" font-family="Georgia, serif" font-size="13">plastome</text>
+<text x="360" y="256" text-anchor="middle" font-family="Georgia, serif" font-size="12">160,928 bp</text>
+<rect x="560" y="120" width="18" height="18" fill="#3d7a40"/>
+<text x="586" y="134" font-family="Georgia, serif" font-size="13">LSC 89,147 bp</text>
+<rect x="560" y="150" width="18" height="18" fill="#c9842a"/>
+<text x="586" y="164" font-family="Georgia, serif" font-size="13">IR (x2) 26,358 bp each</text>
+<rect x="560" y="180" width="18" height="18" fill="#2a6f97"/>
+<text x="586" y="194" font-family="Georgia, serif" font-size="13">SSC 19,065 bp</text>
+<text x="24" y="400" font-family="Georgia, serif" font-size="12">113 unique genes; 18 duplicated in the IR; 131 genes in total.</text>
+  <text x="24" y="432" font-family="Georgia, serif" font-size="11" fill="#333">Numbers from Jansen et al. 2006, doi:10.1186/1471-2148-6-32, full text.</text>
+  <text x="24" y="448" font-family="Georgia, serif" font-size="11" fill="#333">Original schematic, not a reprint of their Fig. 1.</text>
+</svg>

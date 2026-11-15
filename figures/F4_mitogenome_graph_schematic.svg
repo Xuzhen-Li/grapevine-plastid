@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="400" viewBox="0 0 820 400" role="img">
+  <title>F4. Plant mitogenome as a graph (schematic)</title>
+  <rect width="820" height="400" fill="#fffef8"/>
+  <text x="24" y="32" font-family="Georgia, serif" font-size="18" fill="#1a1a1a">F4. Plant mitogenome as a graph (schematic)</text>
+<ellipse cx="240" cy="210" rx="90" ry="60" fill="none" stroke="#8b3a2a" stroke-width="3"/>
+<ellipse cx="360" cy="210" rx="90" ry="60" fill="none" stroke="#8b3a2a" stroke-width="3"/>
+<circle cx="300" cy="210" r="10" fill="#8b3a2a"/>
+<text x="300" y="198" text-anchor="middle" font-family="Georgia, serif" font-size="11">repeat</text>
+<text x="240" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="13">alternative paths</text>
+<text x="560" y="140" font-family="Georgia, serif" font-size="13">A single master circle is not the</text>
+<text x="560" y="160" font-family="Georgia, serif" font-size="13">default description of plant mtDNA</text>
+<text x="560" y="180" font-family="Georgia, serif" font-size="13">(Kozik et al. 2019).</text>
+<text x="560" y="220" font-family="Georgia, serif" font-size="13">GetOrganelle reports all circular</text>
+<text x="560" y="240" font-family="Georgia, serif" font-size="13">configurations it can disentangle.</text>
+<text x="560" y="280" font-family="Georgia, serif" font-size="13">Oatk searches for a best-supported</text>
+<text x="560" y="300" font-family="Georgia, serif" font-size="13">path through the assembly graph.</text>
+  <text x="24" y="372" font-family="Georgia, serif" font-size="11" fill="#333">Sources: doi:10.1371/journal.pgen.1008373; doi:10.1186/s13059-020-02154-5;</text>
+  <text x="24" y="388" font-family="Georgia, serif" font-size="11" fill="#333">doi:10.1186/s13059-025-03676-6. Schematic only, not a reprint.</text>
+</svg>
