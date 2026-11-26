@@ -2,6 +2,24 @@
 
 English | [中文](README.zh.md)
 
+## Start here
+
+This repository is a knowledge base on plant plastid (chloroplast) and mitochondrial genomes: how they are built, how to assemble, annotate and draw them, and how to deal with nuclear copies (NUPT and NUMT), RNA editing and heteroplasmy. It explains the ideas, lists the tools for each analysis step with their papers or repositories, and gives one reference route. Grapevine (*Vitis*) is the worked example throughout. The chapters, the catalogue and the shell wrappers below are reference material, not a maintained software package.
+
+| I want to | Go to |
+|---|---|
+| learn the main ideas | [Knowledge map: concepts](docs/KNOWLEDGE_MAP.md#concepts) |
+| choose a tool for one step | [Knowledge map: tools by analysis step](docs/KNOWLEDGE_MAP.md#tools-by-analysis-step) |
+| follow one route from reads to a checked genome | [Knowledge map: reference workflow](docs/KNOWLEDGE_MAP.md#reference-workflow) |
+| see the published grapevine organelle genomes | [Knowledge map: grapevine organelle genomes](docs/KNOWLEDGE_MAP.md#grapevine-organelle-genomes); [chapter 8](docs/08_vitis.md) |
+| read one topic in depth | [Contents](#contents) below |
+| look at the guide figures | [`docs/figures/guide/`](docs/figures/guide/README.md) |
+| reuse text, figures or code | [`LICENSE`](LICENSE) (code, MIT) and [`NOTICE.md`](NOTICE.md) (text and figures, CC BY 4.0) |
+
+<img src="docs/figures/guide/03_organelle_concepts_schematic.png" width="640" alt="Schematic with four panels: the four-part plastome with inverted-repeat junctions, plant mitochondrial repeats and sub-circles, organelle DNA inserted in the nucleus, and RNA editing with heteroplasmy">
+
+The chapters and the catalogue follow below.
+
 A methods notebook for **plant chloroplast (plastid) and mitochondrial genomes**, with a grapevine (*Vitis*) focus. The repository name says "plastid", but mitochondria are in scope from the first page: assembly, annotation, graph structure, NUMT/NUPT traffic, RNA editing, inheritance, and organelle pangenomes / population data. This is a public teaching collection. It does not contain private lab assemblies or unpublished results.
 
 Every factual statement below and in the chapter files is supposed to come from a paper or a GitHub repository that was actually opened in this batch (15 November 2026, CST). Each chapter ends with a **claim–source table**: the claim, the DOI or URL, a quoted sentence or a figure/table label, and whether the abstract or the full text was read. Claims we could not source are omitted or marked [待确认]. The reading log is `SOURCES_READ.tsv`.
