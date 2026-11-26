@@ -2,6 +2,13 @@
 
 This is the public summary of changes to the teaching files in `grapevine-plastid`. Internal build logs stay on the build machine and are not part of this repository.
 
+## 2026-11-26: knowledge-base layout and licence
+
+- The home page (English and Chinese) now opens with a short **Start here** section: what the repository is, how to use it, and links to the knowledge map. The chapters and the catalogue below it are unchanged; lines are only inserted.
+- New knowledge map in English and Chinese: [`docs/KNOWLEDGE_MAP.md`](docs/KNOWLEDGE_MAP.md) and [`docs/KNOWLEDGE_MAP.zh.md`](docs/KNOWLEDGE_MAP.zh.md). It covers the main concepts (plastome four-part structure, inverted-repeat shifts, plant mitochondrial recombination and multipartite structure, NUPT and NUMT, RNA editing, heteroplasmy), tools by analysis step, a reference workflow and the published grapevine organelle genomes, and lists the papers it cites.
+- Four guide figures in [`docs/figures/guide/`](docs/figures/guide/README.md): two figures reproduced unchanged from open-access papers (CC BY 4.0) and two schematics drawn by a script in the same folder.
+- New [`LICENSE`](LICENSE) (MIT, for code) and [`NOTICE.md`](NOTICE.md) (CC BY 4.0 for text and figures made here; reproduced figures keep their own licence), with a Chinese version [`NOTICE.zh.md`](NOTICE.zh.md).
+
 ## 2026-11-15 (bundle v7b)
 
 - Wording polish; facts and quotes unchanged.
