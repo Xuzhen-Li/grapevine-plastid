@@ -29,7 +29,7 @@ Punctuation only; no facts, numbers, DOIs, or [待确认] markers were changed.
 - The JIPB 2025 selective-sweep quotation now writes π<sub>wild</sub>/π<sub>cul</sub> with no spaces around the slash, matching the source wording.
 - In the Chinese chapters 02 and 09, English verbatim quotations that had ended with a fullwidth period now end with a halfwidth period.
 
-## Already in the teaching tree (earlier revisions)
+## Already in the documentation (earlier updates)
 
 - Chapter 9 splits the JIPB 2025 (*J. Integr. Plant Biol.*, doi:10.1111/jipb.13968, PMC12498075) filters by subsection: the NUMT/NUPT depth formula; π and *F*<sub>ST</sub> keep variants with DP > 2 and missing < 0.1; the 1.5-fold depth cap, the four-read rule, MAF ≥ 0.05, and missing < 0.2 belong only to the GWAS subsection. The remark that copy number and coverage are part of that paper’s filters is labelled as this repository’s inference.
 - Author attribution in the teaching text uses Hou, not Xiao.
