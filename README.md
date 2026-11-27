@@ -22,7 +22,7 @@ The chapters and the catalogue follow below.
 
 A methods notebook for **plant chloroplast (plastid) and mitochondrial genomes**, with a grapevine (*Vitis*) focus. The repository name says "plastid", but mitochondria are in scope from the first page: assembly, annotation, graph structure, NUMT/NUPT traffic, RNA editing, inheritance, and organelle pangenomes / population data. This is a public teaching collection. It does not contain private lab assemblies or unpublished results.
 
-Every factual statement below and in the chapter files is supposed to come from a paper or a GitHub repository that was actually opened in this batch (15 November 2026, CST). Each chapter ends with a **claim–source table**: the claim, the DOI or URL, a quoted sentence or a figure/table label, and whether the abstract or the full text was read. Claims we could not source are omitted or marked [待确认]. The reading log is `SOURCES_READ.tsv`.
+Every factual statement below and in the chapter files is supposed to come from a paper or a GitHub repository that was actually opened (reading dates are in `SOURCES_READ.tsv`: 15 and 27 November 2026, CST). Each chapter ends with a **claim–source table**: the claim, the DOI or URL, a quoted sentence or a figure/table label, and whether the abstract or the full text was read. Claims we could not source are omitted or marked [待确认]. The reading log is `SOURCES_READ.tsv`.
 
 ## Contents
 
@@ -46,7 +46,7 @@ The shell wrappers in [scripts/wrappers/](scripts/wrappers/) only print commands
 
 ## What we are not claiming
 
-- The JIPB 2025 main text says plastid genomes of 33 *Vitis* accessions had “TEs accounted for about 87% (Tables S4, S5)”. That sentence is real, but the supplementary tables were not in the PMC XML we opened, and 87% TE in a 159–164 kb, four-part plastome is hard to reconcile with the typical unrearranged *Vitis* plastome described by Jansen et al. 2006. Treat the 87% figure as **[待确认]** until Table S5 is read. Do not use it as a general fact about plastids.
+- The JIPB 2025 main text says plastid genomes of 33 *Vitis* accessions had “TEs accounted for about 87% (Tables S4, S5)”. That sentence is real. The supplementary tables are not in the PMC XML, but they are in the Europe PMC supplementary file (read 27 November 2026, CST): Averaged over the 33 plastomes, Table S5 gives about 84% for interspersed repeats only (0.839–0.845 per plastome) and about 88% with all repeat classes (small RNA, satellites, simple repeats and low-complexity regions added; 0.883–0.887 per plastome). The main text says about 87%, and the paper does not say which measure it used. Even so, 87% TE in a 159–164 kb, four-part plastome is hard to reconcile with the typical unrearranged *Vitis* plastome described by Jansen et al. 2006. Treat the 87% figure as this paper’s repeat-annotation result, not as a general fact about plastids.
 - No grape-specific substitution rate for LTR or organelle dating is given here.
 - This folder does not copy any private grape-mitochondria project files.
 

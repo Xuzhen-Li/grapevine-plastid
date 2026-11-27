@@ -179,7 +179,7 @@ Published organelle genomes and data sets used as the worked example. Lengths an
 | Eleven cultivars, plastome resequencing | Eight Georgian and three French cultivars in four haplogroups (AAA, ATT, ATA, GTA), compared with Maxxa | Tabidze et al. 2014 |
 | Two Georgian wild grapevine plastomes | 160,928 bp each, 128 genes, haplotype AAA | Pipia et al. 2024 |
 | 409 cultivars, plastome SNV profile | Shotgun sequencing; 102 haplotypes with geographic structure | Rudolf Pilih et al. 2026 |
-| 33 wild and cultivated accessions | Pan-mitogenome, pan-plastome and nuclear genomes from long reads; mitogenomes 663.16 to 817.37 kb; plastomes 159,011 to 163,619 bp | Hou et al. 2025 |
+| 33 wild and cultivated accessions | Pan-mitogenome, pan-plastome and nuclear genomes from long reads; mitogenomes 663.16 to 817.37 kb; plastomes 159,011 to 163,619 bp (main-text figure; Table S4 lists 159,011 to 161,067 bp, see 01_overview.md) | Hou et al. 2025 |
 | RNA editing in grape | Mitochondrial editing from RNA-seq (Picardi et al. 2010); chloroplast and mitochondrial editing under temperature change (Zhang et al. 2020) | see Concepts |
 | NUPT and NUMT in grapevine | Six-species comparison including grapevine (Michalovova et al. 2013); 33 accessions (Hou et al. 2025) | see Concepts |
 

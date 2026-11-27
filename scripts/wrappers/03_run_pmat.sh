@@ -28,7 +28,7 @@ printf 'Note: README autoMito demo (Arabidopsis HiFi), not grape-tuned. CLR/ONT 
 printf 'graphBuild (not printed as the default command): if autoMito fails to generate the assembly graph, use graphBuild to manually select seeds.\n'
 printf 'Status: UNRUN. --dry-run is the only supported mode on this machine.\n'
 if [[ "$DRY" -ne 1 ]]; then
-  printf 'Refusing to run: pass --dry-run. Binaries were not executed in this batch.\n' >&2
+  printf 'Refusing to run: pass --dry-run. Binaries were not executed when this script was written.\n' >&2
   exit 3
 fi
 exit 0

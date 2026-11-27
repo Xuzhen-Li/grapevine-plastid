@@ -27,7 +27,7 @@ printf 'Command (not executed): %s\n' "$CMD"
 printf 'Note: README Arabidopsis HiFi example, not grape-tuned. HiFi only. -c 30 is the Arabidopsis demo; README: set -c as 5-10× nuclear coverage to help filter nuclear sequence and NUMTs.\n'
 printf 'Status: UNRUN. --dry-run is the only supported mode on this machine.\n'
 if [[ "$DRY" -ne 1 ]]; then
-  printf 'Refusing to run: pass --dry-run. Binaries were not executed in this batch.\n' >&2
+  printf 'Refusing to run: pass --dry-run. Binaries were not executed when this script was written.\n' >&2
   exit 3
 fi
 exit 0

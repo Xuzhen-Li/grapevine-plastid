@@ -2,6 +2,14 @@
 
 This is the public summary of changes to the teaching files in `grapevine-plastid`. Internal build logs stay on the build machine and are not part of this repository.
 
+## 2026-11-27: wording cleanup and source checks
+
+- Process-style wording is removed from the home pages, chapters, catalogue and reading logs; reading dates are given instead. The two 2026-11-15 headings below now carry plain version labels.
+- A drawing helper in `scripts/figures/draw_organelle_schematics.py` is renamed; the four SVG figures it writes are byte-identical.
+- Pipia et al. 2023 (*Vitis* 62(4): 193–201) is now described in chapter 8 under its registered DOI, 10.5073/vitis.2023.62.193-201. The slash form printed in the PDF header is not registered, which is why it returned 404.
+- Marked [待确认] before and settled from sources read on 2026-11-27: the ptGAUL command line (chapter 2); the TE figures, checked against Tables S5 and S3 (chapters 1 and 8, home pages): 22% matches the all-repeat-classes mean (0.223; interspersed only 0.215), while 87% matches neither measure in S5 (about 84% interspersed only, about 88% with all repeat classes) and the paper does not say which it used; 33 versus 34 accessions (chapter 8); the 1.5-fold depth rule in Lian et al. 2024 (chapter 9); U-to-C editing in grape mitochondria (chapter 6).
+- Table S4 of the JIPB 2025 paper lists plastomes of 159,011–161,067 bp, while the main text gives an upper bound of 163,619 bp; chapter 1 now says so.
+
 ## 2026-11-26: knowledge-base layout and licence
 
 - The home page (English and Chinese) now opens with a short **Start here** section: what the repository is, how to use it, and links to the knowledge map. The chapters and the catalogue below it are unchanged; lines are only inserted.
@@ -9,12 +17,12 @@ This is the public summary of changes to the teaching files in `grapevine-plasti
 - Four guide figures in [`docs/figures/guide/`](docs/figures/guide/README.md): two figures reproduced unchanged from open-access papers (CC BY 4.0) and two schematics drawn by a script in the same folder.
 - New [`LICENSE`](LICENSE) (MIT, for code) and [`NOTICE.md`](NOTICE.md) (CC BY 4.0 for text and figures made here; reproduced figures keep their own licence), with a Chinese version [`NOTICE.zh.md`](NOTICE.zh.md).
 
-## 2026-11-15 (bundle v7b)
+## 2026-11-15 (version 7b)
 
 - Wording polish; facts and quotes unchanged.
 - README.md and README.zh.md keep the existing lines from the repository front page (the "This is not" links, "What will land later", "See also" and the author line). Only the sentence that called this a placeholder repository with no content yet is replaced by the new introduction.
 
-## 2026-11-15 (bundle v6)
+## 2026-11-15 (version 6)
 
 Punctuation only; no facts, numbers, DOIs, or [待确认] markers were changed.
 

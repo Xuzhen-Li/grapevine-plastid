@@ -10,6 +10,6 @@ Oatk（2025，摘要）在 195 种植物的结果中提到细胞器之间的 DNA
 
 同一篇 GSAT 摘要后半句是 “while the effects of NUMTs in rice were relatively weak”，应与拟南芥那一半一起读，不要写成 NUMT 在各物种影响都一样强。
 
-组装时把核来源片段排除出细胞器组装，和细胞核里真实存在的 NUMT/NUPT，是两类问题。本批次已打开的做法包括：Oatk 的 `-c` 取核覆盖度的 5–10 倍；MitoHiFi 的 NUMT 分离步骤（但其 README 第 6 节原话是 “still not optmized to assemble a plant mitochondria or chloroplast”，`-a plant` 只与 `-c` 配合给已有 contig 收尾；论文写植物上 outcomes may vary，不能直接替代植物图组装器的过滤步骤）；GetOrganelle 的图过滤。对某一份葡萄数据是否足够，标为 **[待确认]**。
+组装时把核来源片段排除出细胞器组装，和细胞核里真实存在的 NUMT/NUPT，是两类问题。已打开的资料里的做法包括：Oatk 的 `-c` 取核覆盖度的 5–10 倍；MitoHiFi 的 NUMT 分离步骤（但其 README 第 6 节原话是 “still not optmized to assemble a plant mitochondria or chloroplast”，`-a plant` 只与 `-c` 配合给已有 contig 收尾；论文写植物上 outcomes may vary，不能直接替代植物图组装器的过滤步骤）；GetOrganelle 的图过滤。对某一份葡萄数据是否足够，标为 **[待确认]**。
 
 论断—出处表见 [05_numt_nupt.md](05_numt_nupt.md)。

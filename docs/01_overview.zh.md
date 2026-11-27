@@ -14,7 +14,7 @@ Hou 等（JIPB 2025，全文）后来用 33 份野生和栽培葡萄材料组装
 
 > “For plastid genome assembly, all 33 grape genomes were successfully assembled into the typical four-part ring structure, ranging in size from 159,011 bp (*Vitis vinifera* ssp. *sylvestris*: Vs) to 163,619 bp (*Vitis vinifera* cv. Cabernet Franc: Vcf). The average GC content of the plastid genomes was 37.38%.”
 
-尺寸范围和四分环状结构，和 Jansen 等的描述大致能对上。同一句后半还有 “while TEs accounted for about 87% (Tables S4, S5)。” PMC 全文 XML 里没有附表 S4、S5，因此这个百分比**不在正文里当作质体组成来讲**，只留在对照表中，标为 **[待确认]**，也不得用来否定 Jansen 等给出的 160,928 bp 紧凑质体。
+尺寸范围和四分环状结构，和 Jansen 等的描述大致能对上。同一句后半还有 “while TEs accounted for about 87% (Tables S4, S5)。” PMC 全文 XML 里没有附表 S4、S5，但 Europe PMC 的补充文件里有（2026 年 11 月 27 日读，CST）。按 33 个质体基因组的平均值，表 S5 只算散在重复（total interspersed repeats）约为 84%（每个基因组 0.839–0.845），算上全部重复类别（加上 small RNA、卫星、简单重复和低复杂度区域）约为 88%（每个基因组 0.883–0.887），而这句话写约 87%，论文没有说明用的是哪一种口径；表 S4 里质体为 159,011–161,067 bp，163,619 bp 这个上限只在正文里。由于 87% 很难和紧凑的质体对上，这个百分比**不在正文里当作质体组成来讲**，只留在对照表中，也不得用来否定 Jansen 等给出的 160,928 bp 紧凑质体。
 
 ## 植物线粒体基因组更大，结构也更活
 
@@ -34,12 +34,12 @@ Christensen（2014，全文）讨论了植物线粒体的修复和“junk”DNA�
 
 Kozik 等（2019，全文）的题名就是 “The alternative reality of plant mitochondrial DNA: One ring does not rule them all。” 他们组装并比较了栽培莴苣（*Lactuca sativa*）和野生莴苣（*L. saligna*、*L. serriola*）的线粒体基因组，并把它们理解成多种结构组成的图，而不是单一主环。对象是莴苣属，不是拟南芥。第 3 章会回到组装工具上的这一点。
 
-在葡萄里，Hou 等（JIPB 2025，全文）对同一批 33 份材料的线粒体组装写：
+在葡萄里，Hou 等（JIPB 2025，全文）对同一组 33 份材料的线粒体组装写：
 
 > “The assembled mitochondrial genomes ranged in size from 663.16 kb (*Vitis rotundifolia*: Vmu) to 817.37 kb (*Vitis vinifera* cv. Carmenere: Vca) and contained 108–129 genes. … The GC content of the mitochondrial genomes has remained relatively consistent, with an average of approximately 44%. The proportion of TEs in the mitochondrial genome is about 22% (Tables S2, S3).”
 
-22% 同样落在我们没有打开的附表上，当作组成事实时标 **[待确认]**。大小和基因数写在正文里，可以使用。
+22% 同样来自附表：表 S3（Europe PMC 补充文件，2026 年 11 月 27 日读，CST）按 33 个线粒体基因组的平均值，只算散在重复（total interspersed repeats）为 0.215（每个基因组 0.204–0.240），算上全部重复类别（加上 small RNA、卫星、简单重复和低复杂度区域）为 0.223（0.212–0.250）。“约 22%” 与后一种口径一致；只算散在重复约为 21.5%，论文没有说明用的是哪一种口径。大小和基因数写在正文里，可以使用。
 
 ## 论断—出处表
 
-与英文版同一张表，原句保持英文。见 [01_overview.md](01_overview.md) 文末。要点：160,928 bp 等数字来自 doi:10.1186/1471-2148-6-32 全文；33 份葡萄的质体/线粒体尺寸来自 doi:10.1111/jipb.13968 全文；87% 和 22% 的 TE 比例在读到附表前为 [待确认]；线粒体动态重组来自 doi:10.1146/annurev-arplant-043015-112232 摘要；大小跨度来自 doi:10.1111/jse.12655 摘要；“不是一个环”来自 doi:10.1371/journal.pgen.1008373 全文题名。
+与英文版同一张表，原句保持英文。见 [01_overview.md](01_overview.md) 文末。要点：160,928 bp 等数字来自 doi:10.1186/1471-2148-6-32 全文；33 份葡萄的质体/线粒体尺寸来自 doi:10.1111/jipb.13968 全文；87% 和 22% 的 TE 比例已对照附表 S5 和 S3（2026 年 11 月 27 日读，CST）：22% 与表 S3 全部重复类别的均值一致，87% 与表 S5 对不上（约 84% 或约 88%，口径未说明）；线粒体动态重组来自 doi:10.1146/annurev-arplant-043015-112232 摘要；大小跨度来自 doi:10.1111/jse.12655 摘要；“不是一个环”来自 doi:10.1371/journal.pgen.1008373 全文题名。
