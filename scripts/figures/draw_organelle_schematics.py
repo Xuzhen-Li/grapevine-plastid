@@ -49,7 +49,7 @@ def fig1(out: Path) -> None:
                       'Numbers from Jansen et al. 2006, doi:10.1186/1471-2148-6-32, full text.',
                       'Original schematic, not a reprint of their Fig. 1.'))
 
-def box(x,y,w,h,label,fill):
+def labeled_rect(x,y,w,h,label,fill):
     return (
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="{fill}" stroke="#222" stroke-width="1.2"/>'
         f'<text x="{x+w/2}" y="{y+h/2+5}" text-anchor="middle" font-family="Georgia, serif" font-size="13">{label}</text>'
@@ -63,15 +63,15 @@ def fig2(out: Path) -> None:
     # Graph-view arrows also leave GetOrganelle and Oatk, not only PMAT.
     body = '\n'.join([
         '<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#222"/></marker></defs>',
-        box(40, 60, 180, 44, 'Illumina WGS / skimming', '#e8f0e8'),
-        box(40, 180, 180, 44, 'PacBio HiFi', '#e8eef6'),
-        box(40, 300, 180, 44, 'CLR / ONT', '#d9e0ea'),
-        box(300, 40, 230, 36, 'GetOrganelle (Jin 2020)', '#cfe3cf'),
-        box(300, 86, 230, 36, 'NOVOPlasty (2017)', '#cfe3cf'),
-        box(300, 160, 230, 36, 'Oatk (Zhou 2025, HiFi only)', '#c9d7ea'),
-        box(300, 230, 230, 36, 'PMAT / PMAT2 (2024/25)', '#c9d7ea'),
-        box(300, 300, 230, 36, 'HiMT (Tang 2025)', '#c9d7ea'),
-        box(600, 160, 190, 48, 'Bandage graph view', '#f3e2c4'),
+        labeled_rect(40, 60, 180, 44, 'Illumina WGS / skimming', '#e8f0e8'),
+        labeled_rect(40, 180, 180, 44, 'PacBio HiFi', '#e8eef6'),
+        labeled_rect(40, 300, 180, 44, 'CLR / ONT', '#d9e0ea'),
+        labeled_rect(300, 40, 230, 36, 'GetOrganelle (Jin 2020)', '#cfe3cf'),
+        labeled_rect(300, 86, 230, 36, 'NOVOPlasty (2017)', '#cfe3cf'),
+        labeled_rect(300, 160, 230, 36, 'Oatk (Zhou 2025, HiFi only)', '#c9d7ea'),
+        labeled_rect(300, 230, 230, 36, 'PMAT / PMAT2 (2024/25)', '#c9d7ea'),
+        labeled_rect(300, 300, 230, 36, 'HiMT (Tang 2025)', '#c9d7ea'),
+        labeled_rect(600, 160, 190, 48, 'Bandage graph view', '#f3e2c4'),
         # Illumina -> short-read tools
         arrow(220, 82, 300, 58),
         arrow(220, 82, 300, 104),

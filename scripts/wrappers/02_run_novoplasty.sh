@@ -28,7 +28,7 @@ printf 'Command (not executed): %s\n' "$CMD"
 printf 'Note: README example only, not grape-tuned. Example script name is 4.3.1; README title is 4.3.3. PE only; do not quality-trim; plant mt = mito_plant after cp assembly. Heteroplasmy: doi:10.1093/nargab/lqz011.\n'
 printf 'Status: UNRUN. --dry-run is the only supported mode on this machine.\n'
 if [[ "$DRY" -ne 1 ]]; then
-  printf 'Refusing to run: pass --dry-run. Binaries were not executed in this batch.\n' >&2
+  printf 'Refusing to run: pass --dry-run. Binaries were not executed when this script was written.\n' >&2
   exit 3
 fi
 exit 0

@@ -14,7 +14,7 @@ A later grape study, Hou et al. (JIPB 2025, full text) assembled plastid genomes
 
 > “For plastid genome assembly, all 33 grape genomes were successfully assembled into the typical four-part ring structure, ranging in size from 159,011 bp (*Vitis vinifera* ssp. *sylvestris*: Vs) to 163,619 bp (*Vitis vinifera* cv. Cabernet Franc: Vcf). The average GC content of the plastid genomes was 37.38%.”
 
-The size range and the four-part structure agree in outline with Jansen et al. The same JIPB sentence continues with “while TEs accounted for about 87% (Tables S4, S5).” Tables S4 and S5 were not in the PMC full-text XML opened for this batch, so that percentage is **not taught as plastid composition**. It is kept only in the claim table as **[待确认]** until S5 is read. It should not be read as contradicting Jansen et al.’s compact 160,928 bp plastome.
+The size range and the four-part structure agree in outline with Jansen et al. The same JIPB sentence continues with “while TEs accounted for about 87% (Tables S4, S5).” Tables S4 and S5 are not in the PMC full-text XML, but they are in the Europe PMC supplementary file (read 27 November 2026, CST). Averaged over the 33 plastomes, Table S5 gives about 84% for interspersed repeats only (0.839–0.845 per plastome) and about 88% with all repeat classes (small RNA, satellites, simple repeats and low-complexity regions added; 0.883–0.887), while the sentence says about 87%; the paper does not say which measure it used. Table S4 lists plastomes of 159,011–161,067 bp, so the 163,619 bp upper bound is in the main text only. Because 87% is hard to square with a compact plastome, the percentage is **not taught as plastid composition** and is kept only in the claim table. It should not be read as contradicting Jansen et al.’s compact 160,928 bp plastome.
 
 ## Plant mitochondrial genomes are larger and more structurally fluid
 
@@ -38,7 +38,7 @@ For grape, Hou et al. (JIPB 2025, full text) reported mitochondrial assemblies a
 
 > “The assembled mitochondrial genomes ranged in size from 663.16 kb (*Vitis rotundifolia*: Vmu) to 817.37 kb (*Vitis vinifera* cv. Carmenere: Vca) and contained 108–129 genes. … The GC content of the mitochondrial genomes has remained relatively consistent, with an average of approximately 44%. The proportion of TEs in the mitochondrial genome is about 22% (Tables S2, S3).”
 
-The 22% TE figure likewise sits in supplementary tables that we did not open, and is marked **[待确认]** when used as a composition fact, although the size and gene-count ranges are in the main text.
+The 22% TE figure likewise sits in the supplementary tables. Table S3 (Europe PMC supplementary file, read 27 November 2026, CST) gives, averaged over the 33 mitogenomes, 0.215 for interspersed repeats only (0.204–0.240 per mitogenome) and 0.223 with all repeat classes (small RNA, satellites, simple repeats and low-complexity regions added; 0.212–0.250). “About 22%” therefore matches the all-classes mean; interspersed repeats alone give about 21.5%, and the paper does not say which measure it used. The size and gene-count ranges are in the main text.
 
 ## Claim–source table
 
@@ -46,10 +46,10 @@ The 22% TE figure likewise sits in supplementary tables that we did not open, an
 |---|---|---|---|
 | *V. vinifera* chloroplast is 160,928 bp, with IR 26,358 bp, SSC 19,065 bp, LSC 89,147 bp, 113 unique genes (18 duplicated in the IR; 131 total) | doi:10.1186/1471-2148-6-32 | “The complete chloroplast genome of grape is 160,928 bp in length … 113 unique genes, 18 of which are duplicated in the IR, for a total of 131 genes (Fig. 1).” | Full text (PMC1479384) |
 | Grape plastome gene order matches unrearranged angiosperms including tobacco | doi:10.1186/1471-2148-6-32 | “The gene content and order of *Vitis* is identical to many other unrearranged angiosperm chloroplast genomes, including tobacco.” (abstract / opening results) | Full text |
-| 33 *Vitis* plastomes assembled as four-part rings, 159,011–163,619 bp; mean GC 37.38% | doi:10.1111/jipb.13968 | Sentence quoted in the chapter, citing Tables S4, S5 | Full text (PMC12498075); Tables S4–S5 themselves not in the XML |
-| “TEs accounted for about 87%” of those plastid genomes | doi:10.1111/jipb.13968 | Same sentence, Tables S4, S5 | Full text; **[待确认]** until S5 is read |
+| 33 *Vitis* plastomes assembled as four-part rings, 159,011–163,619 bp; mean GC 37.38% | doi:10.1111/jipb.13968 | Sentence quoted in the chapter, citing Tables S4, S5 | Full text (PMC12498075); Table S4 (read 2026-11-27 CST) lists 159,011–161,067 bp, so 163,619 bp is a main-text value only |
+| “TEs accounted for about 87%” of those plastid genomes | doi:10.1111/jipb.13968 | Same sentence, Tables S4, S5 | Full text; Table S5 read 2026-11-27 CST: about 84% interspersed repeats only (0.839–0.845 per plastome), about 88% with all repeat classes (0.883–0.887); the text says about 87% and does not state the measure; not taught as plastid composition |
 | Angiosperm mitogenomes are dynamic because of repeat-mediated recombination; this yields subgenomes, CMS-associated variants | doi:10.1146/annurev-arplant-043015-112232 | Abstract sentences quoted above | Abstract only |
 | Published plant mitogenome sizes from 66 kb (*V. scurruloideum*) to 11,000 kb (*S. conica*); linear and multichromosomal forms exist | doi:10.1111/jse.12655 | Abstract sentences quoted above | Abstract only |
 | Enormous, multichromosomal *Silene* mitogenomes with high mutation rates | doi:10.1371/journal.pbio.1001241 | Paper title; abstract in PMC full text | Full text (PMC3260318) |
 | Plant mtDNA should not be assumed to be a single master circle | doi:10.1371/journal.pgen.1008373 | Paper title “One ring does not rule them all” | Full text (PMC6742443) |
-| 33 *Vitis* mitogenomes 663.16–817.37 kb, 108–129 genes; mean GC ~44%; TE proportion “about 22%” (S2, S3) | doi:10.1111/jipb.13968 | Sentence quoted in the chapter | Full text; 22% TE **[待确认]** until S3 is read |
+| 33 *Vitis* mitogenomes 663.16–817.37 kb, 108–129 genes; mean GC ~44%; TE proportion “about 22%” (S2, S3) | doi:10.1111/jipb.13968 | Sentence quoted in the chapter | Full text; Table S3 read 2026-11-27 CST: mean 0.215 for interspersed repeats only, 0.223 with all repeat classes; “about 22%” matches the all-classes mean; the measure is not stated |

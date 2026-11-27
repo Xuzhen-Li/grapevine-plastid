@@ -46,6 +46,6 @@ GetOrganelle 的 README 写明：`embplant_mt` 模式“was not tested in the Ge
 
 ## 长读长质体组装要单独看
 
-Zhou 等（2023，第一作者是 Zhou W，不是 Wang；doi:10.1111/1755-0998.13787，全文）题为 “Plastid Genome Assembly Using Long-read data”，并发表了工具 ptGAUL。摘要写它用 ONT 或 PacBio 长读长组装质体，大约 50× 的质体覆盖度即可。选长读长质体流程时应读这篇，不要假定 Freudenthal 2020 的短读长排名可以直接用在长读长质体上。ptGAUL 的官方命令以该工具 README 为准，本批次没有打开那份 README，命令行标为 **[待确认]**。
+Zhou 等（2023，第一作者是 Zhou W，不是 Wang；doi:10.1111/1755-0998.13787，全文）题为 “Plastid Genome Assembly Using Long-read data”，并发表了工具 ptGAUL。摘要写它用 ONT 或 PacBio 长读长组装质体，大约 50× 的质体覆盖度即可。选长读长质体流程时应读这篇，不要假定 Freudenthal 2020 的短读长排名可以直接用在长读长质体上。ptGAUL 的官方命令以该工具 README（https://github.com/Bean061/ptgaul，2026 年 11 月 27 日读，CST）为准：基本调用为 `ptGAUL.sh -r [PATH]/[reference_genome]/ -l [PATH]/[long_read_data]`，`-r` 为近缘物种的质体基因组，`-l` 为长读长（fasta、fastq 或 fq.gz）；可选参数有 `-t` 线程数、`-g` 预期质体大小（默认 160000）、`-c` 大致覆盖度（默认 50）、`-f` 最短读长（默认 3000）和 `-o` 输出目录。我们没有运行。
 
 论断—出处表与英文版相同，见 [02_assembly.md](02_assembly.md)。

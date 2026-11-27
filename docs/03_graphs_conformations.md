@@ -1,6 +1,6 @@
 # 3. Assembly graphs and alternative conformations
 
-Plant mitochondrial DNA is often better reported as a graph than as one circle. This chapter collects statements from papers and READMEs that were opened in this batch.
+Plant mitochondrial DNA is often better reported as a graph than as one circle. This chapter collects statements from papers and READMEs that were opened.
 
 ## Why a graph
 
@@ -24,7 +24,7 @@ Hou et al. (JIPB 2025, full text) include “Figure S1. Pan-chloroplast structur
 
 ## Looking at the graph
 
-Wick et al. (2015, full text) described Bandage as “interactive visualization of de novo genome assemblies.” The expanded name “a Bioinformatics Application for Navigating De novo Assembly Graphs Easily” is the GitHub repository description and the wording on the project homepage (https://rrwick.github.io/Bandage/). The README opened in this batch introduces Bandage as “a GUI program that allows users to interact with the assembly graphs.” The JIPB supplement cited above is one published use on *Vitis* chloroplast graphs.
+Wick et al. (2015, full text) described Bandage as “interactive visualization of de novo genome assemblies.” The expanded name “a Bioinformatics Application for Navigating De novo Assembly Graphs Easily” is the GitHub repository description and the wording on the project homepage (https://rrwick.github.io/Bandage/). The README introduces Bandage as “a GUI program that allows users to interact with the assembly graphs.” The JIPB supplement cited above is one published use on *Vitis* chloroplast graphs.
 
 ## What to report from a graph assembly
 
